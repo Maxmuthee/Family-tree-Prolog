@@ -4,7 +4,7 @@ name=symbol
 predicates
 parent(name,name)
 female(name)
-male (name)
+male(name)
 mother(name,name)
 father(name,name)
 brother(name,name)
