@@ -74,3 +74,7 @@ father(X,Y):-parent(X,Y),male(X).
 sibling(X,Y):-parent(Z,X),parent(Z,Y),X\=Y.
 spouse(X,Y):-parent(X,Z), parent(Y,Z),X\=Y.
 grandparent(X,Y):-parent(X,A),parent(A,Y).
+nephew(X,Y):-male(X),parent(Z,X),sibling(Z,Y).
+niece(X,Y):-female(X),parent(Z,X),sibling(Z,Y).
+uncle(X,Y):-male(X),parent(Z,Y),sibling(X,Z).
+auntie(X,Y):-female(X),parent(Z,Y),sibling(X,Z).
